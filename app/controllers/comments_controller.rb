@@ -7,7 +7,6 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    debugger
     @post = Post.find(params[:post_id])
     @comment = @post.comments.find(params[:id])
     @comment.destroy
